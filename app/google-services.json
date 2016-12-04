@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "906727781835",
+    "project_id": "firebase-dorigcm"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906727781835:android:2d4440012860cb4e",
+        "android_client_info": {
+          "package_name": "com.gudwns999.smartkeyapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOstGu0r1ieGBQiXi2HIlC46LJtbUEJTw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

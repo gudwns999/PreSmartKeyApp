@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gudwns999.smartkeyapp" >
+    <!-- GCM 퍼미션 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:name="com.gudwns999.smartkeyapp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.gudwns999.smartkeyapp.permission.C2D_MESSAGE" />
+    <!-- 진동 퍼미션 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar" >
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.Splash" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <activity android:name=".Home"></activity>
+    <activity android:name=".Main"></activity>
+    <activity android:name=".Key"></activity>
+    <activity android:name=".Map"></activity>
+    <activity android:name=".Parking"></activity>
+    <activity android:name=".Info"></activity>
+
+    <!-- GCM 리시버 -->
+    <receiver
+        android:name=".GcmBroadcastReceiver"
+        android:permission="com.google.android.c2dm.permission.SEND" >
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <category android:name="com.gudwns999.smartkeyapp" />
+        </intent-filter>
+    </receiver>
+    <!-- GCM 서비스 -->
+    <service android:name=".GCMIntentService" />
+</manifest>
